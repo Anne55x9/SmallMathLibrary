@@ -12,10 +12,23 @@ namespace Sandbox
         // Example: the "faculty" of 4 is 4! = 4 x 3 x 2 x 1 = 24
         // NB: If n < 1, then the faculty is 1
         //
+
+        
+
         public int Faculty(int n)
         {
-            // This needs to be changed...
-            return 0;
+            int nfag = 1;
+
+            if (n >= 1)
+            {
+                
+                for (int k = 1; k <= n; k++)
+                {
+                    nfag = nfag * k;
+                }
+            }
+            
+            return nfag;
         }
 
         // This method must return the sum of the numbers between
@@ -25,8 +38,16 @@ namespace Sandbox
         // NB: If start > end, the sum is 0 (zero)
         public int IntervalSum(int start, int end)
         {
-            // This needs to be changed...
-            return 0;
+            int sum = 0;
+
+            if (start <= end)
+            {
+                for (int i = start; i <= end; i++)
+                {
+                    sum = sum + i;
+                }
+            }
+            return sum;
         }
 
         // This method must return the highest square number
@@ -37,8 +58,17 @@ namespace Sandbox
         // NB: If the limit is zero or negative, return zero
         public int HighestSquareBelowLimit(int limit)
         {
-            // This needs to be changed...
-            return 0;
+            int sqnumb = 0;
+            if (limit > 0)
+            {
+                int k = 1;
+                while (k * k < limit)
+                {
+                    sqnumb = k * k;
+                    k++;
+                }
+            }
+            return sqnumb;
         }
 
 
